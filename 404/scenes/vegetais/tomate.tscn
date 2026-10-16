@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://csteoys1tmsox"]
+
+[ext_resource type="Texture2D" uid="uid://c8d1ra38c1ilw" path="res://assets/items&objects/Crop_Spritesheet.png" id="1_e8m8v"]
+[ext_resource type="Script" uid="uid://b8nk3r3k713ir" path="res://scenes/vegetais/tomate.gd" id="1_klje7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77167"]
+size = Vector2(15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klje7"]
+atlas = ExtResource("1_e8m8v")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi8p1"]
+atlas = ExtResource("1_e8m8v")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ee1w"]
+atlas = ExtResource("1_e8m8v")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rux65"]
+atlas = ExtResource("1_e8m8v")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2l7f"]
+atlas = ExtResource("1_e8m8v")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ynpp"]
+atlas = ExtResource("1_e8m8v")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_55dnt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klje7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi8p1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ee1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rux65")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2l7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ynpp")
+}],
+"loop": 1,
+"name": &"semente",
+"speed": 5.0
+}]
+
+[node name="tomate" type="Area2D" unique_id=875487922]
+script = ExtResource("1_klje7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=340458089]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_77167")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=874223664]
+sprite_frames = SubResource("SpriteFrames_55dnt")
+animation = &"semente"
+frame = 5
+frame_progress = 0.7058762
